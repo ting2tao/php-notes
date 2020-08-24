@@ -7,7 +7,7 @@ php study notes
 
 环境：
 
-    mysql5.7 php7.1 thinkphp 5.1 redis5.0.5
+  eg:  mysql5.7 php7.1 thinkphp 5.1 redis5.0.5
     
 出现的问题现象：
     
