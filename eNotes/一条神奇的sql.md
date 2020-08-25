@@ -1,5 +1,7 @@
 # 一条神奇的sql
 
+github看不了图的话，麻烦移驾：https://gitee.com/slovty/php-notes/blob/master/eNotes/%E4%B8%80%E6%9D%A1%E7%A5%9E%E5%A5%87%E7%9A%84sql.md
+
 个人有一个习惯，喜欢在查询的时候把sql也打印出来去数据库执行一下，看是否预期一致。
  就是这个习惯，让我发现一个"神奇"的现象：同一预期的sql通过不同的方法而得到出不同的结果集。
 
@@ -84,3 +86,5 @@ PDO实例调用的bindValue()接收3个参数，而$val[1]=2,所以值是会加�
 没有加上，但是这个也是tp5.1版本的bug吧，tp5.0.24没这个问题
 
 ![tp5.0.24的getRealSql()](assets/435e9664.png)
+
+github看不了图的话，麻烦移驾：https://gitee.com/slovty/php-notes/blob/master/eNotes/%E4%B8%80%E6%9D%A1%E7%A5%9E%E5%A5%87%E7%9A%84sql.md
