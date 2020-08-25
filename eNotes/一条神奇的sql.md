@@ -25,20 +25,6 @@ github看不了图的话，麻烦移驾：https://gitee.com/slovty/php-notes/blo
 
 ![](./assets/一条神奇的sql-1598262409174.png)
 
-**可还原数据支持**
-
-`CREATE TABLE `xn_my_enum` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `username` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '名字',
-  `type` enum('2','3','9','6') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '2' COMMENT 'type',
-  `createtime` int(10) unsigned DEFAULT '0' COMMENT '时间',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='神奇的sql测试表';
-`
-
-**_SELECT * FROM `xn_my_enum` WHERE  `type` IN (1,2);_**
-
-INSERT into `xn_my_enum`(username,type) VALUES('VBA','2'),('VBA333','3'),('VBA6','6'),('VBA9','9');
 
 **解决问题的过程**
 
@@ -86,5 +72,21 @@ PDO实例调用的bindValue()接收3个参数，而$val[1]=2,所以值是会加�
 没有加上，但是这个也是tp5.1版本的bug吧，tp5.0.24没这个问题
 
 ![tp5.0.24的getRealSql()](assets/435e9664.png)
+
+
+**可还原数据支持**
+
+`CREATE TABLE `xn_my_enum` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `username` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '名字',
+  `type` enum('2','3','9','6') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '2' COMMENT 'type',
+  `createtime` int(10) unsigned DEFAULT '0' COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='神奇的sql测试表';
+`
+
+**_SELECT * FROM `xn_my_enum` WHERE  `type` IN (1,2);_**
+
+INSERT into `xn_my_enum`(username,type) VALUES('VBA','2'),('VBA333','3'),('VBA6','6'),('VBA9','9');
 
 github看不了图的话，麻烦移驾：https://gitee.com/slovty/php-notes/blob/master/eNotes/%E4%B8%80%E6%9D%A1%E7%A5%9E%E5%A5%87%E7%9A%84sql.md
